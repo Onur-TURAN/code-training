@@ -1,0 +1,11 @@
+# exercism
+
+## Bash
+
+## Rust
+
+
+
+
+
+
