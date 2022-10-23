@@ -1,1 +1,0 @@
-print("Day 1 - Python Print Function\nartık 2. gün")

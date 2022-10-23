@@ -1,1 +1,0 @@
-# şu anda yapılıyor
