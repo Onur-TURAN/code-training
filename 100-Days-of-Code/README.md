@@ -2,9 +2,9 @@
 ***
 ## Merhabalar, Bu repoda anlık olarak 
 
- - [x] [DAY 1](https://github.com/Onur-TURAN/100-Days-of-Code/tree/main/day_1)
- - [ ] [DAY 2](https://github.com/Onur-TURAN/100-Days-of-Code/tree/main/day_2)
- - [ ] [DAY 3](https://github.com/Onur-TURAN/100-Days-of-Code/tree/main/day_3)
- - [ } [DAY 4](https://github.com/Onur-TURAN/100-Days-of-Code/tree/main/day_4)
+ - [x] [DAY 1](https://github.com/Onur-TURAN/code-training/tree/main/100-Days-of-Code/main/day_1)
+ - [x] [DAY 2](https://github.com/Onur-TURAN/code-training/tree/main/100-Days-of-Code/main/day_2)
+ - [x] [DAY 3](https://github.com/Onur-TURAN/code-training/tree/main/100-Days-of-Code/main/day_3)
+ - [ ] [DAY 4](https://github.com/Onur-TURAN/code-training/tree/main/100-Days-of-Code/main/day_4)
 
  
