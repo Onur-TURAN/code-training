@@ -1,44 +1,59 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<math.h>
 // Girilecek 3 sayiyi büyükten küçüğe siralayiniz.
-int main ()
-{
+int main (){
 	int a,b,c;
-	printf("lutfen 3 sayi giriniz:");
-	scanf("%d,%d,%d",&a,&b,&c);
-	s
+	printf("Lutfen 3 sayi giriniz\n");
+	scanf("%d",&a);
+	scanf("%d",&b);
+	scanf("%d",&c);
+	//(2^n)-1 tane ihtimal var
 	if(a>b && a>c)
 	{
 		if(b>c)
 		{
-			printf("%d,%d,%d",a,b,c);
+			printf("\n%d>%d>%d",a,b,c);
 		}
 		else
 		{
-			printf("%d,%d,%d",a,c,b);
+			printf("\n%d>%d>%d",a,c,b);
 		}
 	}
 	else if(b>a && b>c)
 	{
 		if(a>c)
 		{
-			printf("%d,%d,%d",b,a,c);
+			printf("\n%d>%d>%d",b,a,c);
 		}
 		else
 		{
-			printf("%d,%d,%d",b,c,a);
+			printf("\n%d>%d>%d",b,c,a);
 		}
 	}
+	/***********************************************
+	 *********BURADA else if KULLANILABİLİR*********
+	 ******AMA ZATEN TEK SEÇENEK KALDIĞI İÇİN ******
+	 ************DOGRU YAZIM DILI OLARAK ***********
+	 ****************TERCIH EDILMEZ*****************
+	 */
+	
 	else
 	{
-		if(a>b)
+		if(b>a)
 		{
-			printf("%d,%d,%d",c,a,b);
+			printf("\n%d>%d>%d",c,b,a);
 		}
 		else
 		{
-			printf("%d,%d,%d",c,b,a);
+			printf("\n%d>%d>%d",c,a,b);
 		}
 	}
-return 0;
+
+	return 0;
 }
+/************
+ ************
+ **by biyik**
+ ************
+ ***********/
