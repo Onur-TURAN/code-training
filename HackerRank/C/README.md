@@ -1,9 +1,15 @@
 # Checklist
 
-- [X] ["Hello World!" in C](https://github.com/Onur-TURAN/HackerRank/tree/main/C/1_hello-world))
-- [X] [Playing with Characters](https://github.com/Onur-TURAN/HackerRank/tree/main/C/2_playing-with-characters)
-- [X] [Sum and Difference of Two Numbers](https://github.com/Onur-TURAN/HackerRank/tree/main/C/3_sum-and-difference)
-- [ ] [Function C](https://github.com/Onur-TURAN/Hacakerrank/tree/main/C/4_function-c)
-
+- [X] 01_hello-world
+- [X] 02_playing-with-characters
+- [X] 03_sum-and-difference
+- [X] 04_function-c
+- [X] 05_pointers-in-c
+- [X] 06_conditional-statements-in-c
+- [X] 07_for-loops-in-c
+- [X] 08_sum-of-digits-five
+- [X] 09_Bitwise
+- [X] 10_calcutenthnnumber
+- [] 11_printing-pattern-using-loops
 
 
