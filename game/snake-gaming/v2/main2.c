@@ -3,7 +3,7 @@
 # include <time.h>
 int main(){
 	
-    int N,M,yemek,i,j,x,y,k,yilanx,yilany,hamle,yemeksayisi,oldx,oldy,m;
+    int N,M,yemek,i,j,x,y,k,yilanx,yilany,hamle,yemeksayisi,oldx,oldy,m,key;
 	int yilanuzunluk=1;
     char yon;
     int alan[100][100];
@@ -82,14 +82,23 @@ int main(){
 		// oyun döngüsü
 		while(yemeksayisi>0)
 		{
-		    printf("lütfen gitmek istediğiniz yönü giriniz.\n");
+		    printf("lütfen gitmek istediğiniz yönü giriniz.");
 		    scanf("%c", &yon);
-            oldx=yilanx;
+            		oldx=yilanx;
 			oldy=yilany;
 			//yön alma
-		    if(yon=='u'||yon=='U')
+		switch (key)
+			case 'w':
+		yon = u;
+			case 'a':
+		yon = l;
+			case 's':
+		yon = d;
+			case 'd':
+		yon = r;	
+		if(yon=='u'||yon=='U')
 		    {	
-                yilanx--;
+                        yilanx--;
 		        hamle++;
 
 				if(alan[yilanx][yilany]==0)
@@ -98,15 +107,15 @@ int main(){
 		        	alan[yilanx][yilany]=1;
 		        	yilanuzunluk++;
 		        	yemeksayisi--;
-                    printf("lütfen gitmek istediğiniz yönü giriniz.\n");
-                    scanf("%c",&yon);
+                    //printf("lütfen gitmek istediğiniz yönü giriniz.\n");
+                    //scanf("%c",&yon);
                      if(yon=='u'||yon=='U')
                         {
                         oldx=yilanx;
                         oldy=yilany;
                         yilanx--;
                         hamle++;}
-                        if(yon=='d'||yon=='D')
+                        /*if(yon=='d'||yon=='D')
                         {
                         oldx=yilanx;
                         oldy=yilany;
@@ -123,7 +132,7 @@ int main(){
                         oldx=yilanx;
                         oldy=yilany;
                         yilany++;
-                        hamle++;}
+                        hamle++;}*/
                         for ( m = yilanuzunluk; m>0; m--)
                     {
                         dir_memo[0][m]=dir_memo[0][m-1];
@@ -134,27 +143,28 @@ int main(){
                         dir_memo[1][0]=yilany;
                         alan[dir_memo[0][yilanuzunluk]][dir_memo[1][yilanuzunluk]]=-1;
 		    	}
-                else{
+		else {
                  
 				//oldx ve oldy değişkenleri yılanın yerini saklamayı sağlayacak ki ilerledikçe arkasındaki izi silebilelim
 				
-                for ( m=yilanuzunluk; m>0; m--)
+                /*for ( m=yilanuzunluk; m>0; m--)
                 {
                     dir_memo[0][m]=dir_memo[0][m-1];
                     dir_memo[1][m]=dir_memo[0][m-1];
                     alan[dir_memo[0][m]][dir_memo[1][m]]=m;
-                }
+                }*/
                     dir_memo[0][0]=yilanx;
                     dir_memo[1][0]=yilany;
                     alan[yilanx][yilany]=1;
                     alan[dir_memo[0][yilanuzunluk]][dir_memo[1][yilanuzunluk]]=-1;
+		    printf("bugggg");
 
                 }
                
-		        
+		     printf("bugg yukarıııııı");   
 		    }
 
-		  if(yon=='D'||yon=='d')
+		    if(yon=='D'||yon=='d')
 		    {	
                 yilanx++;
 		        hamle++;
@@ -165,21 +175,21 @@ int main(){
 		        	alan[yilanx][yilany]=1;
 		        	yilanuzunluk++;
 		        	yemeksayisi--;
-                    printf("lütfen gitmek istediğiniz yönü giriniz.\n");
-                    scanf("%c",&yon);
-                     if(yon=='u'||yon=='U')
+                    //printf("lütfen gitmek istediğiniz yönü giriniz.\n");
+                    //scanf("%c",&yon);
+                    /* if(yon=='u'||yon=='U')
                         {
                         oldx=yilanx;
                         oldy=yilany;
                         yilanx--;
-                        hamle++;}
+                        hamle++;}*/
                         if(yon=='d'||yon=='D')
                         {
                         oldx=yilanx;
                         oldy=yilany;
                         yilanx++;
                         hamle++;}
-                        if(yon=='l'||yon=='L')
+                       /* if(yon=='l'||yon=='L')
                         {
                         oldx=yilanx;
                         oldy=yilany;
@@ -190,7 +200,7 @@ int main(){
                         oldx=yilanx;
                         oldy=yilany;
                         yilany++;
-                        hamle++;}
+                        hamle++;}*/
                         for ( m = yilanuzunluk; m>0; m--)
                     {
                         dir_memo[0][m]=dir_memo[0][m-1];
@@ -219,8 +229,8 @@ int main(){
                
 		        
 		    }
-		    
-		   	if(yon=='r'||yon=='R')
+		    //yon sag
+		  	if(yon=='r'||yon=='R')
 		    {	
                 yilany++;
 		        hamle++;
@@ -231,9 +241,9 @@ int main(){
 		        	alan[yilanx][yilany]=1;
 		        	yilanuzunluk++;
 		        	yemeksayisi--;
-                    printf("lütfen gitmek istediğiniz yönü giriniz.\n");
-                    scanf("%c",&yon);
-                     if(yon=='u'||yon=='U')
+                    //printf("lütfen gitmek istediğiniz yönü giriniz.\n");
+                    //scanf("%c",&yon);
+                     /*if(yon=='u'||yon=='U')
                         {
                         oldx=yilanx;
                         oldy=yilany;
@@ -250,7 +260,7 @@ int main(){
                         oldx=yilanx;
                         oldy=yilany;
                         yilany--;
-                        hamle++;}
+                        hamle++;}*/
                         if(yon=='r'||yon=='R')
                         {
                         oldx=yilanx;
@@ -270,24 +280,24 @@ int main(){
                 else{
                  alan[yilanx][yilany]=1;
 				//oldx ve oldy değişkenleri yılanın yerini saklamayı sağlayacak ki ilerledikçe arkasındaki izi silebilelim
-				
+			/*	
                 for ( m=yilanuzunluk; m>0; m--)
                 {
                     dir_memo[0][m]=dir_memo[0][m-1];
                     dir_memo[1][m]=dir_memo[0][m-1];
                     alan[dir_memo[0][m]][dir_memo[1][m]]=m;
-                }
+                }*/
                     dir_memo[0][0]=yilanx;
                     dir_memo[1][0]=yilany;
                     alan[dir_memo[0][yilanuzunluk]][dir_memo[1][yilanuzunluk]]=-1;
 
                 }
                
-		        
+		     printf("bugg saggggg");   
 		    }
 			
-		    
-		    if(yon=='l'||yon=='L')
+		    //yon sol
+			if(yon=='l'||yon=='L')
 		    {	
                 yilany--;
 		        hamle++;
@@ -298,9 +308,9 @@ int main(){
 		        	alan[yilanx][yilany]=1;
 		        	yilanuzunluk++;
 		        	yemeksayisi--;
-                    printf("lütfen gitmek istediğiniz yönü giriniz.\n");
-                    scanf("%c",&yon);
-                     if(yon=='u'||yon=='U')
+                    //printf("lütfen gitmek istediğiniz yönü giriniz.\n");
+                    //scanf("%c",&yon);
+                     /*if(yon=='u'||yon=='U')
                         {
                         oldx=yilanx;
                         oldy=yilany;
@@ -311,19 +321,19 @@ int main(){
                         oldx=yilanx;
                         oldy=yilany;
                         yilanx++;
-                        hamle++;}
+                        hamle++;}*/
                         if(yon=='l'||yon=='L')
                         {
                         oldx=yilanx;
                         oldy=yilany;
                         yilany--;
-                        hamle++;}
+                        hamle++;}/*
                         if(yon=='r'||yon=='R')
                         {
                         oldx=yilanx;
                         oldy=yilany;
                         yilany++;
-                        hamle++;}
+                        hamle++;}*/
                         for ( m = yilanuzunluk; m>0; m--)
                     {
                         dir_memo[0][m]=dir_memo[0][m-1];
@@ -333,24 +343,24 @@ int main(){
                         dir_memo[0][0]=yilanx;
                         dir_memo[1][0]=yilany;
                         alan[dir_memo[0][yilanuzunluk]][dir_memo[1][yilanuzunluk]]=-1;
-		    	}
+			}
                 else{
                  alan[yilanx][yilany]=1;
 				//oldx ve oldy değişkenleri yılanın yerini saklamayı sağlayacak ki ilerledikçe arkasındaki izi silebilelim
 				
-                for ( m=yilanuzunluk; m>0; m--)
+                /*for ( m=yilanuzunluk; m>0; m--)
                 {
                     dir_memo[0][m]=dir_memo[0][m-1];
                     dir_memo[1][m]=dir_memo[0][m-1];
                     alan[dir_memo[0][m]][dir_memo[1][m]]=m;
-                }
+                }*/
                     dir_memo[0][0]=yilanx;
                     dir_memo[1][0]=yilany;
                     alan[dir_memo[0][yilanuzunluk]][dir_memo[1][yilanuzunluk]]=-1;
 
                 }
                
-		        
+		        printf("buggg sollllll");
 		    }
 		    
 		    if(yilanx<0||yilanx>N||yilany<0||yilany>M)
@@ -361,20 +371,21 @@ int main(){
 		    
 		    }
 		     
-		    for ( i = 0; i < N; i++)
+		    for ( i = 1; i < N; i++)
 		    {
-			    for ( j = 0; j < M; j++)
+			    for ( j = 1; j < M; j++)
 			    {
 				    if(alan[i][j]==-1)
 					printf("x\t");
 				    else
-				    printf("%d \t", alan[i][j]);
+				    {
+					    printf("%d \t", alan[i][j]);
+				    }
 			    }
-			        printf("\n");
+				printf("\n");
 		    }
 			printf("hamle sayısı:%d\t",hamle);
             printf("kalan yemek sayisi:%d\t",yemeksayisi);
-		
         }	
 		printf("\ntebrikler oyunu tamamladınız.");
 	}
