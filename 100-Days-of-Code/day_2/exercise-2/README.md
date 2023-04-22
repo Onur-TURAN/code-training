@@ -1,1 +1,1 @@
-# şu anda yapılıyor
+#  done
