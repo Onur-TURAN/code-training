@@ -1,1 +1,0 @@
-print("Your name's lenght is:\n" + str(len(input("what is your name?\n"))))
