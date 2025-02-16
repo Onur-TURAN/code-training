@@ -21,3 +21,16 @@ This Python script reads a text file, processes each line by adding double quote
 ### Example
 
 Suppose `line.txt` contains the following lines:
+
+### what is command use
+
+```bash
+# Run the script
+python main.py
+```
+
+## Developed By
+
+- Onur TURAN
+- GitHub: [Onur-TURAN](https://github.com/Onur-TURAN)
+- Nickname: biyik
