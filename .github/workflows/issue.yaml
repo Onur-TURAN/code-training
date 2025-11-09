@@ -18,7 +18,7 @@ on:
       dry_run:
         description: 'just log (true/false)'
         required: false
-        default: 'true'
+        default: 'false'
       max_issues:
         description: 'Maksimum oluşturulacak issue sayısı (0 = sınırsız)'
         required: false
