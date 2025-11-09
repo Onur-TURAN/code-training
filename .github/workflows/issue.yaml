@@ -62,7 +62,10 @@ jobs:
             const fs = require('fs').promises;
             const path = require('path');
 
-            const dryRun = (process.env.DRY_RUN || 'true').toLowerCase() === 'true';
+            // Note: when triggered by push/pull_request there is no workflow_dispatch input,
+            // so process.env.DRY_RUN may be empty. The fallback below is 'false' so that
+            // by default non-manual runs can actually create issues (change with caution).
+            const dryRun = (process.env.DRY_RUN || 'false').toLowerCase() === 'true';
             const maxIssues = parseInt(process.env.MAX_ISSUES || '10', 10);
             const openaiEnabled = (process.env.OPENAI_ENABLED || 'false').toLowerCase() === 'true';
             const createPr = (process.env.CREATE_PR || 'false').toLowerCase() === 'true';
